@@ -1,0 +1,28 @@
+[tower]
+cmnv-tower3.crucible.iisl.com ansible_connection=local
+
+[database]
+cmnv-tower3.crucible.iisl.com
+
+[all:vars]
+ansible_become=true
+nginx_https_port=8080
+https_port=8080
+
+admin_password='Universal1'
+
+pg_host='cmnv-tower3.crucible.iisl.com'
+pg_port='5432'
+
+pg_database='tower'
+pg_username='tower'
+pg_password='Universal1'
+
+rabbitmq_port=5672
+rabbitmq_vhost=tower
+rabbitmq_username=tower
+rabbitmq_password=tower
+rabbitmq_cookie=rabbitmqcookie
+
+# Needs to be true for fqdns and ip addresses
+rabbitmq_use_long_name=true
